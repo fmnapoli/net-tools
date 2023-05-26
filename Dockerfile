@@ -50,6 +50,9 @@ RUN apk update && \
     && rm -rf /var/cache/apk/*
 
     COPY --from=builder /opt/ /opt/
+    COPY scripts/ /usr/local/bin/
+
+    RUN chmod +x /usr/local/bin/*
 
     ENV PATH $PATH:/opt/aws-cli/bin:/opt/google-cloud-sdk/bin
 
