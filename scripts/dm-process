@@ -1,0 +1,6 @@
+#!/bin/bash
+
+url="http://localhost:52323/processes"
+
+result=$(curl -s -X GET -H "Accept: application/json" "$url")
+echo $result
